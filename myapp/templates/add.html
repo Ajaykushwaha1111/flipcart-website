@@ -1,0 +1,12 @@
+{% extends 'main.html'%}
+{% block body%}
+
+<div class="container">
+    <h1>Welcome Students</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{fm.as_p}}
+        <input type="submit" value="Add Student " class="btn btn-success">
+    </form>
+</div>
+{% endblock%}
